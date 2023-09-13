@@ -8,7 +8,7 @@ class AssertingAnExceptionIsThrownTest {
     AssertingAnExceptionIsThrown at= new AssertingAnExceptionIsThrown();
     @Test
     void testDivide() {
-        Exception exception = assertThrows(IllegalStateException.class,
+        Exception exception = assertThrows(IllegalArgumentException.class,
                 () -> at.divide(5,0) );
         String expected = "Ints cannot be divided by zero";
 
