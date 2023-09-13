@@ -7,9 +7,9 @@ public class HairSaloon {
         return openingDay;
     }
 
-    public boolean isOpen(String weekDay) throws IllegalAccessException {
+    public boolean isOpen(String weekDay) throws IllegalArgumentException {
         if (!weekDay.endsWith("day")){
-            throw new IllegalAccessException("The weekday argument must end in the letters 'day'");
+            throw new IllegalArgumentException("The weekday argument must end in the letters 'day'");
         }
         if (weekDay.equalsIgnoreCase("Monday") || weekDay.equalsIgnoreCase("Tuesday") ){
             return true;
